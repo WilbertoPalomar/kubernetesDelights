@@ -1,1 +1,1 @@
-key = "prd/terraform-vpc-eks-s3-irsa-demo/tfstate"
+key = "prd/terraform-eks-s3-irsa-bert/tfstate"

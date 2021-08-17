@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "play-tfstate" #Put your bucket here
-    region = "us-west-2"
+    region = "ap-southeast-2"
     acl    = "bucket-owner-full-control"
   }
 }

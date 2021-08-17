@@ -1,6 +1,6 @@
 variable "region" {
   description = "AWS Region"
-  default     = "us-west-2"
+  default     = "ap-southeast-2"
 }
 
 #SET THESE ROLES TO YOUR TERRAFORM ROLES PER ACCOUNT
@@ -9,9 +9,9 @@ variable "role_arn" {
   type        = map(string)
 
   default = {
-    test = "arn:aws:iam::<account_id>:role/devops"
-    stg  = "arn:aws:iam::<account_id>:role/devops"
-    prd  = "arn:aws:iam::<account_id>:role/devops"
+    test = "arn:aws:iam::643990739293:role/devops"
+    stg  = "arn:aws:iam::643990739293:role/devops"
+    prd  = "arn:aws:iam::643990739293:role/devops"
   }
 }
 
@@ -21,9 +21,9 @@ variable "aws_account_id" {
   type        = map(string)
 
   default = {
-    test = "<account_id>"
-    stg  = "<account_id>"
-    prd  = "<account_id>"
+    test = "643990739293"
+    stg  = "643990739293"
+    prd  = "643990739293"
   }
 }
 
@@ -58,9 +58,9 @@ variable "availability_zones" {
   })
 
   default = {
-    test = ["us-west-2a", "us-west-2b", "us-west-2c"]
-    stg  = ["us-west-2a", "us-west-2b", "us-west-2c"]
-    prd  = ["us-west-2a", "us-west-2b", "us-west-2c", "us-west-2d"]
+    test = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
+    stg  = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
+    prd  = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
   }
 }
 
@@ -75,7 +75,7 @@ variable "private_subnets" {
   default = {
     test = ["172.21.1.0/24", "172.21.2.0/24", "172.21.3.0/24"]
     stg  = ["172.22.1.0/24", "172.22.2.0/24", "172.22.3.0/24"]
-    prd  = ["172.23.1.0/24", "172.23.2.0/24", "172.23.3.0/24", "172.23.4.0/24", "172.23.5.0/24", "172.23.6.0/24"]
+    prd  = ["172.23.1.0/24", "172.23.2.0/24", "172.23.3.0/24"]
   }
 }
 
@@ -90,7 +90,7 @@ variable "public_subnets" {
   default = {
     test = ["172.21.11.0/24", "172.21.12.0/24", "172.21.13.0/24"]
     stg  = ["172.22.11.0/24", "172.22.12.0/24", "172.22.13.0/24"]
-    prd  = ["172.23.11.0/24", "172.23.12.0/24", "172.23.13.0/24", "172.23.14.0/24", "172.23.15.0/24", "172.23.16.0/24"]
+    prd  = ["172.23.11.0/24", "172.23.12.0/24", "172.23.13.0/24"]
   }
 }
 
@@ -165,7 +165,7 @@ variable "map_accounts" {
   type        = list(string)
 
   default = [
-    "<your account id>",
+    "643990739293",
   ]
 }
 

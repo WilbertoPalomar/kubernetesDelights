@@ -31,7 +31,7 @@ Then run a terraform plan `terraform plan -var 'env=test' src/`
 
 If looks ok go ahead and run the apply `terraform apply -var 'env=test' src/`
 
-Answer with yes when asked if you want to apply. It will take a bit to provision the VPC, related resources, the EKS cluster and related resources. Once done you need to setup your local kubectl for access by running `aws eks update-kubeconfig --region us-west-2 --name aws-vpc` or `aws eks update-kubeconfig --region us-west-2 --name aws-vpc --role arn:aws:iam::<account_id>:role/<name>` with whatever role you used to create the cluster (defined in variables).
+Answer with yes when asked if you want to apply. It will take a bit to provision the VPC, related resources, the EKS cluster and related resources. Once done you need to setup your local kubectl for access by running `aws eks update-kubeconfig --region ap-southeast-2 --name aws-vpc` or `aws eks update-kubeconfig --region ap-southeast-2 --name aws-vpc --role arn:aws:iam::<account_id>:role/<name>` with whatever role you used to create the cluster (defined in variables).
 
 ## Kubernetes Testing
 To deploy the demo app to test IRSA ability run:
